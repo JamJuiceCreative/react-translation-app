@@ -34,13 +34,14 @@ export default function Dropdown(props) {
 
   return (
     <div>
-      <label htmlFor={menuType}>Language:</label>
+      <label htmlFor={menuType} className="m-2">Language:</label>
       <select
         name={menuType}
         onChange={(e) => languageSelect(e)}
         value={props.sourceLang || props.outputLang}
       >
           <option value="english">English</option>
+          <option value="auto">Auto Detect</option>
           <option value="arabic">Arabic</option>
           <option value="azerbaijani">Azerbaijani</option>
           <option value="catalan">Catalan</option>
@@ -70,7 +71,6 @@ export default function Dropdown(props) {
           <option value="swedish">Swedish</option>
           <option value="turkish">Turkish</option>
           <option value="ukrainian">Ukrainian</option>
-          <option value="auto">Auto Detect</option>
         </select>
       </div>
     );

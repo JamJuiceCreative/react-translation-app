@@ -22,7 +22,7 @@ export default function UploadText(props) {
     }
 
   return (
-    <div>
+    <div className ="d-flex flex-column flex-md-row justify-content-center align-items-center p-4">
         <input type="file" name="selectFile" onChange={ event => handleFileChange(event) } />
         {/* <div>{textFile && `${textFile.name}`}</div> */}
         <button type="button" name="uploadText" className="btn btn-primary" onClick={ handleSubmit }>Upload Text File</button>

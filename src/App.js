@@ -8,12 +8,13 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header />
-      <Navbar />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/image" element={<ImageReader />} />
-        </Routes>
+        <Header />
+        <Navbar />
+       
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/image" element={<ImageReader />} />
+          </Routes>
       </BrowserRouter>
     </div>
   );
