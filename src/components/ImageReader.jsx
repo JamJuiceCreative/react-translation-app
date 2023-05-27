@@ -61,19 +61,38 @@ export default function ImageReader() {
   };
 
   return (
-    <div className ="d-flex flex-column align-items-center">
-      <label htmlFor="image-upload" className ="m-2">Select an image to upload</label>
-      <input type="file" name="image-upload" onChange={(e) => handleFile(e)} />
-      <button onClick={handleImgSubmit} className ="m-2">Upload</button>
-      <Dropdown sourceLang={sourceLang} setSourceLang={setSourceLang} />
-      <Recordinput input={inputString} setInput={setInputString} />
-      <Dropdown outputLang={outputLang} setOutputLang={setOutputLang} />
-      {isLoading ? (
-        <PreLoader1 /> // Show the loader while translating
-      ) : (
-        <Recordoutput outputText={outputString} />
-      )}
-      <button type="submit" onClick={handleTxtSubmit}>Translate</button>
+    <div className="container py-4">
+      <div className="row justify-content-center align-items-center mb-4">
+        <div className="col-md-6 mb-3 text-center">
+          <label htmlFor="image-upload">Select an image to upload</label>
+          <input type="file" name="image-upload" onChange={(e) => handleFile(e)} />
+        </div>
+        <div className="col-md-6 mb-3 text-center">
+          <button onClick={handleImgSubmit} className="btn btn-primary">Upload</button>
+        </div>
+      </div>
+      <div className="row justify-content-between align-items-stretch">
+        <div className="col-md-6 mb-3">
+          <div className="d-flex flex-column align-items-center">
+            <Dropdown sourceLang={sourceLang} setSourceLang={setSourceLang} />
+            <Recordinput input={inputString} setInput={setInputString} />
+            <button type="submit" onClick={handleTxtSubmit} className="btn btn-primary m-1">Translate</button>
+          </div>
+        </div>
+        <div className="col-md-6 mb-3">
+          <div className="d-flex flex-column align-items-center">
+            <Dropdown outputLang={outputLang} setOutputLang={setOutputLang} />
+            {isLoading ? (
+              <PreLoader1 /> // Show the loader while translating
+            ) : (
+              <Recordoutput outputText={outputString} />
+            )}
+            
+          </div>
+        </div>
+      </div>
     </div>
   );
+  
+
 }

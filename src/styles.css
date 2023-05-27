@@ -20,6 +20,9 @@ li{
     
 }
 
+
+
+
 .nav ul {
     padding: 15;
     margin: 10 ;
@@ -42,8 +45,9 @@ li{
     border-radius: 10px;  
 }
   
-.nav li.active {
-    background-color: #3202f1;
+.nav li a.active {
+    background-color: #5D7589;
+    color: white;
 }
 
 .nav li:hover {
@@ -51,3 +55,15 @@ li{
     border-radius: 15px;
 
 }
+
+.input-textarea {
+    min-width: 30ch;
+    width: 70%;
+    margin: 50px, 0;
+  }
+
+  .output-textarea {
+    min-width: 30ch;
+    width: 70%;
+    margin: 50px, 0;
+  }
